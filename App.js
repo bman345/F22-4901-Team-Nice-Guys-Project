@@ -8,10 +8,9 @@ import LoginScreen from './screens/Login';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Navigator>
         <Stack.Screen
           name="Home"
           component={HomeScreen}

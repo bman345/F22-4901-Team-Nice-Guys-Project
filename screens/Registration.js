@@ -6,7 +6,7 @@ export default function RegistrationScreen() {
   
     return (
       <View style={styles.container}>
-        <Text>"This is the registration page"</Text>
+        <Text>This is the registration page</Text>
         <StatusBar style="auto" />
       </View>
     );
@@ -15,7 +15,7 @@ export default function RegistrationScreen() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#D2FFB7',
       alignItems: 'center',
       justifyContent: 'center',
     },
