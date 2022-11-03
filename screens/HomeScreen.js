@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Button, Pressable, Image } from 'react-native';
 
 
 export default function HomeScreen({ navigation }) {
   
     return (
       <View style={styles.container}>
-        <Text style={styles.Title}>Baby Tracker</Text>
+        <Image style={styles.image} source={require("../assets/BabyTrackerLogo2.png")}/>
         <Pressable style={styles.Button1} onPress={() => navigation.navigate("Login")}>
           <Text style={styles.Text}>Login</Text>
         </Pressable>
@@ -40,6 +40,14 @@ export default function HomeScreen({ navigation }) {
       marginBottom:25,
       marginTop:40,
     },
+
+    image: {
+      height: 200,
+      width: 200,
+      marginBottom: 40,
+      marginLeft:40,
+    },
+  
 
     Button2:{
       padding: 10,

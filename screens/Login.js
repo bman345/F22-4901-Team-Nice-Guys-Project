@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { getFirebaseAuth } from "../Firebase";
 
@@ -15,7 +16,7 @@ import {
 } from "react-native";
 
 
-export default function App() {
+export default function Login() {
 
   const fb_auth = getFirebaseAuth();
 
@@ -31,55 +32,57 @@ export default function App() {
 
   return (
 
-    <View style={styles.container}>
-      <Image style={styles.image} source={require("../assets/BabyTrackerLogo2.png")} />
+    <KeyboardAwareScrollView style={styles.container}>
+      <View style={styles.Inner}>
+        <Image style={styles.image} source={require("../assets/BabyTrackerLogo2.png")} />
 
 
      
-      <StatusBar style="auto" />
+        <StatusBar style="auto" />
 
-      <View style={styles.inputView}>
+        <View style={styles.inputView}>
 
-        <TextInput
-          style={styles.TextInput}
-          placeholder="Email"
-          placeholderTextColor="#000000"
-          onChangeText={setEmail}
-          value={email}
+          <TextInput
+            style={styles.TextInput}
+            placeholder="Email"
+            placeholderTextColor="#000000"
+            onChangeText={setEmail}
+            value={email}
 
-        />
+          />
 
-      </View>
+        </View>
 
-      <View style={styles.inputView}>
+        <View style={styles.inputView}>
 
-        <TextInput
+          <TextInput
 
-          style={styles.TextInput}
-          placeholder="Password"
-          placeholderTextColor="#000000"
-          secureTextEntry={true}
-          onChangeText={setPassword}
-          value={password}
+            style={styles.TextInput}
+            placeholder="Password"
+            placeholderTextColor="#000000"
+            secureTextEntry={true}
+            onChangeText={setPassword}
+            value={password}
 
-        />
-      </View>
+          />
+        </View>
 
-      <TouchableOpacity>
-        <Text style={styles.forgot_button}>Forgot Password?</Text>
-      </TouchableOpacity>
+        <TouchableOpacity>
+          <Text style={styles.forgot_button}>Forgot Password?</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity style={styles.loginBtn}>
-        <Button title="LOGIN" color="transparent" style={styles.loginText} onPress={() => signInWithEmailAndPassword(email, password)}/>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.loginBtn}>
+          <Button title="LOGIN" color="transparent" style={styles.loginText} onPress={() => signInWithEmailAndPassword(email, password)}/>
+        </TouchableOpacity>
 
  
 
-      <TouchableOpacity style={styles.registerBtn}>
-        <Button title="REGISTER" color="transparent" style={styles.registerText}/>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.registerBtn}>
+          <Button title="REGISTER" color="transparent" style={styles.registerText}/>
+        </TouchableOpacity>
 
-    </View>
+      </View>
+    </KeyboardAwareScrollView>
 
   );
 
@@ -90,6 +93,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#D2FFB7",
+  },
+
+  Inner: {
     alignItems: "center",
     justifyContent: "center",
   },
@@ -123,11 +129,13 @@ const styles = StyleSheet.create({
    flex: 1,
     padding: 10,
     marginLeft: 20,
+    textAlign: "center"
   },
 
   forgot_button: {
     height: 30,
     marginBottom: 30,
+    textAlign: 'center'
   },
 
   loginBtn: {
