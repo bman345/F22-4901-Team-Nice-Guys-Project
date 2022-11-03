@@ -1,5 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { getFirebaseAuth } from "../Firebase";
 
 import {
   StyleSheet,
@@ -12,9 +14,20 @@ import {
 
 } from "react-native";
 
+
 export default function App() {
+
+  const fb_auth = getFirebaseAuth();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(fb_auth);
 
   return (
 
@@ -31,7 +44,8 @@ export default function App() {
           style={styles.TextInput}
           placeholder="Email"
           placeholderTextColor="#000000"
-          onChangeText={(email) => setEmail(email)}
+          onChangeText={setEmail}
+          value={email}
 
         />
 
@@ -45,7 +59,8 @@ export default function App() {
           placeholder="Password"
           placeholderTextColor="#000000"
           secureTextEntry={true}
-          onChangeText={(password) => setPassword(password)}
+          onChangeText={setPassword}
+          value={password}
 
         />
       </View>
@@ -55,13 +70,13 @@ export default function App() {
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.loginBtn}>
-        <Text style={styles.loginText}>LOGIN</Text>
+        <Button title="LOGIN" color="transparent" style={styles.loginText} onPress={() => signInWithEmailAndPassword(email, password)}/>
       </TouchableOpacity>
 
  
 
       <TouchableOpacity style={styles.registerBtn}>
-        <Text style={styles.registerText}>REGISTER</Text>
+        <Button title="REGISTER" color="transparent" style={styles.registerText}/>
       </TouchableOpacity>
 
     </View>

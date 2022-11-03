@@ -54,6 +54,6 @@ export default function HomeScreen({ navigation }) {
     Text:{
       fontSize: 35,
       textAlign:'center',
-      textAlignVertical:'middle',
+      textAlignVertical:'center',
     },
   });
