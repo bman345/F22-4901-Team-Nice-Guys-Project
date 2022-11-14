@@ -1,6 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import {getFirebaseAuth} from "../Firebase";
 
 import {
   StyleSheet,
@@ -20,6 +22,15 @@ export default function Registration() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+
+  const auth = getFirebaseAuth();
+
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
 
   return (
     <KeyboardAwareScrollView style={styles.container}>
@@ -74,14 +85,10 @@ export default function Registration() {
           />
         </View>
 
-        <TouchableOpacity style={styles.loginBtn}>
-          <Button title="LOGIN" color="transparent" style={styles.loginText} onPress={() => signInWithEmailAndPassword(email, password)}/>
-        </TouchableOpacity>
-
  
 
         <TouchableOpacity style={styles.registerBtn}>
-          <Button title="REGISTER" color="transparent" style={styles.registerText}/>
+          <Button title="REGISTER" color="transparent" style={styles.registerText} onPress={() => createUserWithEmailAndPassword(email, password)}/>
         </TouchableOpacity>
 
       </View>
