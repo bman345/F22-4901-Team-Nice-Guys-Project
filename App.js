@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from "./screens/HomeScreen";
 import RegistrationScreen from './screens/Registration';
 import LoginScreen from './screens/Login';
+import CreateBaby from './screens/CreateBaby';
 import { getFirebaseApp } from './Firebase';
 import { getAuth } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth'
@@ -11,7 +12,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-
+  
   const fb_app = getFirebaseApp();
   const fb_auth = getAuth(fb_app);
 
@@ -35,10 +36,25 @@ export default function App() {
             name="Home"
             component={HomeScreen}
           />
+          <Stack.Screen
+            name="Login"
+            component={LoginScreen}
+          />
+          <Stack.Screen
+          name="Registration"
+          component={RegistrationScreen}
+          />
+          <Stack.Screen
+          name="Create Baby"
+          component={CreateBaby}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     );
   }
+
+/* This is breaking the navigation container for some reason, so 
+   we'll fix this later
 
   return (
     <NavigationContainer>
@@ -58,7 +74,7 @@ export default function App() {
       </Stack.Navigator>
     </NavigationContainer>
   );
-
+    */
 }
 
 

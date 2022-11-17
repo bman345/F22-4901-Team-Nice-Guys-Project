@@ -16,19 +16,13 @@ import {
 } from "react-native";
 
 
-export default function Login() {
+export default function CreateBaby() {
 
-  const fb_auth = getFirebaseAuth();
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const [
-    signInWithEmailAndPassword,
-    user,
-    loading,
-    error,
-  ] = useSignInWithEmailAndPassword(fb_auth);
+  const [birthday, SetBirthday] = useState("");
+  const [weight, SetWeight] = useState("");
+  const [height, setHeight] = useState("");
+  const [name, SetBabyName] = useState("");
+  const [gender, SetGender] = useState("");
 
   return (
 
@@ -36,18 +30,17 @@ export default function Login() {
       <View style={styles.Inner}>
         <Image style={styles.image} source={require("../assets/BabyTrackerLogo2.png")} />
 
-
-     
         <StatusBar style="auto" />
 
-        <View style={styles.inputView}>
 
+        <View style={styles.inputView}>
+          
           <TextInput
             style={styles.TextInput}
-            placeholder="Email"
+            placeholder="Baby Name"
             placeholderTextColor="#000000"
-            onChangeText={setEmail}
-            value={email}
+            onChangeText={SetBabyName}
+            value={name}
 
           />
 
@@ -58,22 +51,60 @@ export default function Login() {
           <TextInput
 
             style={styles.TextInput}
-            placeholder="Password"
+            placeholder="Birthday"
             placeholderTextColor="#000000"
-            secureTextEntry={true}
-            onChangeText={setPassword}
-            value={password}
+            onChangeText={SetBirthday}
+            value={birthday}
 
           />
         </View>
 
-        <TouchableOpacity>
-          <Text style={styles.forgot_button}>Forgot Password?</Text>
-        </TouchableOpacity>
+        <View style={styles.inputView}>
+
+          <TextInput
+
+            style={styles.TextInput}
+            placeholder="Weight"
+            placeholderTextColor="#000000"
+            onChangeText={SetWeight}
+            value={weight}
+
+          />
+        </View>
+
+        <View style={styles.inputView}>
+
+          <TextInput
+
+            style={styles.TextInput}
+            placeholder="Height"
+            placeholderTextColor="#000000"
+            onChangeText={setHeight}
+            value={height}
+
+          />
+        </View>
+
+        <View style={styles.inputView}>
+
+          <TextInput
+
+            style={styles.TextInput}
+            placeholder="Gender"
+            placeholderTextColor="#000000"
+            onChangeText={SetGender}
+            value={gender}
+
+          />
+        </View>
+
+        
+
 
         <TouchableOpacity style={styles.loginBtn}>
-          <Button title="LOGIN" color="Black" style={styles.loginText} onPress={() => signInWithEmailAndPassword(email, password)}/>
+          <Button title="Add Baby" color="#000000" style={styles.loginText}/>
         </TouchableOpacity>
+
 
 
 
@@ -88,7 +119,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: "#D2FFB7",
+    backgroundColor: "#FFFFFF",
   },
 
   Inner: {
@@ -103,13 +134,7 @@ const styles = StyleSheet.create({
     marginLeft:40,
   },
 
-/*
-  imageLetter: {
-    height: 200,
-    width: 200,
-    top: -100,
-  },
-*/
+
 
   inputView: {
     backgroundColor: "#7DC265",
@@ -122,7 +147,7 @@ const styles = StyleSheet.create({
 
   TextInput: {
     height: 50,
-   flex: 1,
+    flex: 1,
     padding: 10,
     marginLeft: 20,
     textAlign: "center"
@@ -153,7 +178,5 @@ const styles = StyleSheet.create({
     marginTop: 40,
     backgroundColor: "#7DC265",
   },
-
- 
 
 });

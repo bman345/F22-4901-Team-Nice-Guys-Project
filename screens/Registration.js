@@ -16,7 +16,7 @@ import {
 } from "react-native";
 
 
-export default function Registration() {
+export default function Registration({ navigation }) {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -88,7 +88,11 @@ export default function Registration() {
  
 
         <TouchableOpacity style={styles.registerBtn}>
-          <Button title="REGISTER" color="transparent" style={styles.registerText} onPress={() => createUserWithEmailAndPassword(email, password)}/>
+          <Button title="Register" color="black" style={styles.registerText} onPress={() => {createUserWithEmailAndPassword(email, password);}}/>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.registerBtn}>
+          <Button title="Create Baby (testing)" color="black" style={styles.registerText} onPress={() => {navigation.navigate("Create Baby");}}/>
         </TouchableOpacity>
 
       </View>
