@@ -22,11 +22,10 @@ const SECTIONS = [
       { icon: 'phone', color: '#fd2d54', label: 'Emergency Contact', type: 'link' },
       { icon: 'users', color: '#fe9400', label: 'Manage Accounts', type: 'link' },
       {
-        //id: 'darkMode',
+        
         icon: 'moon',
         color: '#007afe',
         label: 'Dark Mode',
-        //setForm: false,
         type: 'toggle',
       },
      
@@ -46,7 +45,7 @@ const SECTIONS = [
 
 export default function Example() {
 
-  const [isEnabled, setIsEnabled] = useState(false);
+  const [isEnabled, setIsEnabled] = useState(false); //for the darkmode toggle
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   
   return (
