@@ -14,7 +14,7 @@ import {EventRegister} from "react-native-event-listeners";
 import themeContext from '../config/themeContext';
 
 
-
+//creating rows/ sections for each option
 const SECTIONS = [
   {
     header: 'Preferences',
@@ -48,11 +48,9 @@ const SECTIONS = [
 
 
 export default function Example() {
-  const theme = useContext(themeContext);
-
-  // const [isEnabled, setIsEnabled] = useState(false);
-  // const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   
+  //const to witch between light and dark mode in togggle
+  const theme = useContext(themeContext);
   const [mode, setMode] = useState(false);
 
   return (
@@ -109,6 +107,7 @@ export default function Example() {
 
                     <View style={[styles.rowSpacer, {color: theme.color}]} />
 
+                     //handles dark mode toggle
                     {type === 'toggle' && (
                     <Switch 
                     value={mode} 
