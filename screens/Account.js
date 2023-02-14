@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {
   StyleSheet,
   SafeAreaView,
@@ -10,6 +10,9 @@ import {
   Switch,
 } from 'react-native';
 import FeatherIcon from 'react-native-vector-icons/Feather';
+import {EventRegister} from "react-native-event-listeners";
+import themeContext from '../config/themeContext';
+
 
 
 const SECTIONS = [
@@ -22,10 +25,11 @@ const SECTIONS = [
       { icon: 'phone', color: '#fd2d54', label: 'Emergency Contact', type: 'link' },
       { icon: 'users', color: '#fe9400', label: 'Manage Accounts', type: 'link' },
       {
-        
+        //id: 'darkMode',
         icon: 'moon',
         color: '#007afe',
         label: 'Dark Mode',
+        //setForm: false,
         type: 'toggle',
       },
      
@@ -44,19 +48,22 @@ const SECTIONS = [
 
 
 export default function Example() {
+  const theme = useContext(themeContext);
 
-  const [isEnabled, setIsEnabled] = useState(false); //for the darkmode toggle
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+  // const [isEnabled, setIsEnabled] = useState(false);
+  // const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   
+  const [mode, setMode] = useState(false);
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView contentContainerStyle={styles.container}>
-        <View style={styles.profile}>
+      <ScrollView contentContainerStyle={[styles.container, {backgroundColor: theme.background}]}>
+        <View style={[styles.profile, {backgroundColor: theme.background}]}>
           <TouchableOpacity
             onPress={() => {
               // handle onPress
             }}>
-            <View style={styles.profileAvatarWrapper}>
+            <View style={[styles.profileAvatarWrapper, {backgroundColor: theme.background}]}>
               <Image
                 alt=""
                 source={require("../assets/BabyTrackerLogo.png")}
@@ -75,17 +82,17 @@ export default function Example() {
           </TouchableOpacity>
 
           <View style={styles.profileBody}>
-            <Text style={styles.profileName}> Guest </Text>
+            <Text style={[styles.profileName, {color: theme.color}]}> Guest </Text>
 
-            <Text style={styles.Role}>
+            <Text style={[styles.Role, {color:theme.color}]}>
               Admin: Parent
             </Text>
           </View>
         </View>
 
         {SECTIONS.map(({ header, items }) => (
-          <View style={styles.section} key={header}>
-            <Text style={styles.sectionHeader}>{header}</Text>
+          <View style={[styles.section, {backgroundColor: theme.background}]} key={header}>
+            <Text style={[styles.sectionHeader, {color: theme.color}]}>{header}</Text>
             {items.map(({ label, icon, type, value, color }, index) => {
               return (
                 <TouchableOpacity
@@ -93,27 +100,36 @@ export default function Example() {
                   onPress={() => {
                     // handle onPress
                   }}>
-                  <View style={styles.row}>
+                  <View style={[styles.row,{backgroundColor: theme.background}]}>
                     <View style={[styles.rowIcon, { backgroundColor: color }]}>
                       <FeatherIcon color="#fff" name={icon} size={18} />
                     </View>
 
-                    <Text style={styles.rowLabel}>{label}</Text>
+                    <Text style={[styles.rowLabel, {color: theme.color}]}>{label}</Text>
 
-                    <View style={styles.rowSpacer} />
+                    <View style={[styles.rowSpacer, {color: theme.color}]} />
 
                     {type === 'toggle' && (
                     <Switch 
-                    value={isEnabled} 
-                    onValueChange={toggleSwitch}
+                    value={mode} 
+                    onValueChange= {(value) => {
+                      setMode(value);
+                      EventRegister.emit("changeTheme", value);
+                    
+                    }
+                    }
+                    
                     />
                     )}
 
                     {type === 'link' && (
                       <FeatherIcon
-                        color="#0c0c0c"
+                        //color="#0c0c0c" //original color
+                        color = {theme.color}
                         name="chevron-right"
                         size={22}
+                       
+                        
                       />
                     )}
                   </View>
