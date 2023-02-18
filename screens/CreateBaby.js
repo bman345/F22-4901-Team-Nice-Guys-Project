@@ -16,7 +16,7 @@ import {
 } from "react-native";
 
 
-export default function CreateBaby() {
+export default function CreateBaby({ navigation }) {
 
   const [birthday, SetBirthday] = useState("");
   const [weight, SetWeight] = useState("");
