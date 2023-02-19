@@ -33,6 +33,7 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-firebase-hooks": "^5.0.3",
+    "react-native": "0.70.5",
     "react-native-calendars": "^1.1293.0",
     "react-native-event-listeners": "^1.0.7",
     "react-native-increment-decrement-button": "^1.0.0",
@@ -43,11 +44,12 @@
     "react-native-web": "~0.18.7",
     "react-navigation": "^4.4.4",
     "react-test-renderer": "^18.1.0",
-    "save-dev": "^0.0.1-security",
-    "react-native": "0.70.5"
+    "save-dev": "^0.0.1-security"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.3"
+    "@babel/core": "^7.19.3",
+    "@testing-library/jest-native": "^5.4.1",
+    "@testing-library/react-native": "^11.5.2"
   },
   "private": true
 }

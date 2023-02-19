@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#D2FFB7",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Object {
+        "height": 200,
+        "marginBottom": 40,
+        "marginLeft": 40,
+        "width": 200,
+      }
+    }
+  />
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#7DC265",
+        "borderRadius": 6,
+        "height": 64,
+        "marginBottom": 25,
+        "marginTop": 40,
+        "padding": 10,
+        "width": 294,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 35,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+        }
+      }
+    >
+      Login
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#82A16E",
+        "borderRadius": 6,
+        "height": 64,
+        "marginBottom": 25,
+        "marginTop": 25,
+        "padding": 10,
+        "width": 294,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 35,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+        }
+      }
+    >
+      Registration
+    </Text>
+  </View>
+</View>
+`;

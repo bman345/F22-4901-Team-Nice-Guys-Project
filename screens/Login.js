@@ -34,7 +34,7 @@ export default function Login() {
 
     <KeyboardAwareScrollView style={styles.container}>
       <View style={styles.Inner}>
-        <Image style={styles.image} source={require("../assets/BabyTrackerLogo2.png")} />
+        <Image style={styles.image} source={require("../assets/BabyTrackerLogo2.png")}/>
 
 
      
