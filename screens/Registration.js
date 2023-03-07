@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import {getFirebaseAuth} from "../Firebase";
+import { createUser, getFirebaseAuth } from "../Firebase";
 
 import {
   StyleSheet,
@@ -32,72 +32,77 @@ export default function Registration({ navigation }) {
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
 
-  return (
-    <KeyboardAwareScrollView style={styles.container}>
-      <View style={styles.Inner}>
-        <Image style={styles.image} source={require("../assets/BabyTrackerLogo2.png")} />
-     
-        <StatusBar style="auto" />
+  if (user) {
+    
+  } else {
 
-        <View style={styles.inputView}>
+    return (
+      <KeyboardAwareScrollView style={styles.container}>
+        <View style={styles.Inner}>
+          <Image style={styles.image} source={require("../assets/BabyTrackerLogo2.png")} />
 
-          <TextInput
-            style={styles.TextInput}
-            placeholder="Name"
-            placeholderTextColor="#000000"
-            onChangeText={setName}
-            value={name}
-          />
+          <StatusBar style="auto" />
+
+          <View style={styles.inputView}>
+
+            <TextInput
+              style={styles.TextInput}
+              placeholder="Name"
+              placeholderTextColor="#000000"
+              onChangeText={setName}
+              value={name}
+            />
+          </View>
+
+          <View style={styles.inputView}>
+            <TextInput
+
+              style={styles.TextInput}
+              placeholder="Email"
+              placeholderTextColor="#000000"
+              onChangeText={setEmail}
+              value={email}
+
+            />
+          </View>
+
+          <View style={styles.inputView}>
+            <TextInput
+              style={styles.TextInput}
+              placeholder="Phone Number"
+              placeholderTextColor="#000000"
+              onChangeText={setPhone}
+              value={phone}
+
+            />
+          </View>
+
+          <View style={styles.inputView}>
+            <TextInput
+
+              style={styles.TextInput}
+              placeholder="Password"
+              placeholderTextColor="#000000"
+              secureTextEntry={true}
+              onChangeText={setPassword}
+              value={password}
+            />
+          </View>
+
+
+
+          <TouchableOpacity style={styles.registerBtn}>
+            <Button title="Register" color="black" style={styles.registerText} onPress={() => { createUserWithEmailAndPassword(email, password).then((token) => createUser(name, email, phone, token.user.uid)); }} />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.registerBtn}>
+            <Button title="Create Baby (testing)" color="black" style={styles.registerText} onPress={() => { navigation.navigate("Create Baby"); }} />
+          </TouchableOpacity>
+
         </View>
-
-        <View style={styles.inputView}>
-          <TextInput
-
-            style={styles.TextInput}
-            placeholder="Email"
-            placeholderTextColor="#000000"
-            onChangeText={setEmail}
-            value={email}
-
-          />
-        </View>
-
-        <View style={styles.inputView}>
-          <TextInput
-            style={styles.TextInput}
-            placeholder="Phone Number"
-            placeholderTextColor="#000000"
-            onChangeText={setPhone}
-            value={phone}
-
-          />
-        </View>
-
-        <View style={styles.inputView}>
-          <TextInput
-
-            style={styles.TextInput}
-            placeholder="Password"
-            placeholderTextColor="#000000"
-            secureTextEntry={true}
-            onChangeText={setPassword}
-            value={password}
-          />
-        </View>
-
- 
-
-        <TouchableOpacity style={styles.registerBtn}>
-          <Button title="Register" color="black" style={styles.registerText} onPress={() => {createUserWithEmailAndPassword(email, password);}}/>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.registerBtn}>
-          <Button title="Create Baby (testing)" color="black" style={styles.registerText} onPress={() => {navigation.navigate("Create Baby");}}/>
-        </TouchableOpacity>
-
-      </View>
-    </KeyboardAwareScrollView>
-  );
+      </KeyboardAwareScrollView>
+    );
+  }
 
 }
 
@@ -117,7 +122,7 @@ const styles = StyleSheet.create({
     height: 200,
     width: 200,
     marginBottom: 40,
-    marginLeft:40,
+    marginLeft: 40,
   },
 
 
@@ -162,6 +167,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#7DC265",
   },
 
- 
+
 
 });

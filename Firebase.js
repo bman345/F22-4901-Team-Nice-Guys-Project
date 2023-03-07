@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { onValue, get, getDatabase, ref, set, push, remove } from 'firebase/database';
+import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -16,7 +17,8 @@ const firebaseConfig = {
   measurementId: "G-PFKDQESW2F"
 };
 
-const firebase_app = initializeApp(firebaseConfig);;
+const firebase_app = initializeApp(firebaseConfig);
+//rsetPersistence(getFirebaseAuth(), browserLocalPersistence);
 
 // Initialize Firebase
 function getFirebaseApp() {
@@ -27,4 +29,27 @@ function getFirebaseAuth() {
   return getAuth(firebase_app);
 }
 
-export {getFirebaseApp, getFirebaseAuth};
+function getReference(key) {
+  return ref(getDatabase(firebase_app), key);
+}
+
+function getUserData(uid) {
+  const data = getReference(`users/${uid}`);
+
+}
+
+function createUser(name, email, phone, uid) {
+  set(getReference('accounts/' + uid), {
+    zbabydata: [],
+    username: name,
+    email: email,
+    phone: phone
+  });
+}
+
+function createBaby(user_data, baby_data) {
+  push(getReference(`accounts/${user_data.uid}/zbaby_data/`), baby_data);
+}
+
+
+export { getFirebaseApp, getFirebaseAuth, getReference, createUser, createBaby  };

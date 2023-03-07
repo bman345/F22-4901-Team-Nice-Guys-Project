@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { getFirebaseAuth } from "../Firebase";
+import { getFirebaseAuth, createBaby } from "../Firebase";
 
 import {
   StyleSheet,
@@ -15,9 +15,22 @@ import {
 
 } from "react-native";
 
+function validateBaby(birthday, weight, height, name, gender, user_data, navigation) {
+  createBaby(user_data, {
+    birthday: birthday, 
+    weight: weight,
+    height: height,
+    name: name,
+    gender: gender
+  });
 
-export default function CreateBaby({ navigation }) {
+  navigation.goBack();
+}
 
+
+export default function CreateBaby({ navigation, route }) {
+
+  const user_data = route.params.user_data;
   const [birthday, SetBirthday] = useState("");
   const [weight, SetWeight] = useState("");
   const [height, setHeight] = useState("");
@@ -102,7 +115,7 @@ export default function CreateBaby({ navigation }) {
 
 
         <TouchableOpacity style={styles.loginBtn}>
-          <Button title="Add Baby" color="#000000" style={styles.loginText}/>
+          <Button title="Add Baby" color="#000000" style={styles.loginText} onPress={() => {validateBaby(birthday, weight, height, name, gender, user_data, navigation)}}/>
         </TouchableOpacity>
 
 

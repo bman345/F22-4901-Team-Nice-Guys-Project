@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { getFirebaseAuth } from "../Firebase";
+import Account from './Account';
 
 import {
   StyleSheet,
@@ -16,7 +17,7 @@ import {
 } from "react-native";
 
 
-export default function Login() {
+export default function Login({ navigation: { goBack } }) {
 
   const fb_auth = getFirebaseAuth();
 
@@ -29,6 +30,13 @@ export default function Login() {
     loading,
     error,
   ] = useSignInWithEmailAndPassword(fb_auth);
+
+  console.log(user)
+
+  if(user) {
+    console.log("Logged in");
+    goBack();
+  }
 
   return (
 
@@ -72,7 +80,7 @@ export default function Login() {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.loginBtn}>
-          <Button title="LOGIN" color="Black" style={styles.loginText} onPress={() => signInWithEmailAndPassword(email, password)}/>
+          <Button title="LOGIN" color="Black" style={styles.loginText} onPress={() => {console.log("sign in"); signInWithEmailAndPassword(email, password)}}/>
         </TouchableOpacity>
 
 
