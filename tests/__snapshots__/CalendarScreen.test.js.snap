@@ -112,7 +112,7 @@ exports[`renders correctly 1`] = `
               }
               testID="undefined.header.title"
             >
-              February 2023
+              March 2023
             </Text>
           </View>
           <View
@@ -339,7 +339,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Sunday 29 January 2023 "
+              accessibilityLabel=" Sunday 26 February 2023 "
               accessibilityState={
                 Object {
                   "disabled": false,
@@ -363,7 +363,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-01-29"
+              testID="undefined.day_2023-02-26"
             >
               <Text
                 allowFontScaling={false}
@@ -383,7 +383,7 @@ exports[`renders correctly 1`] = `
                   ]
                 }
               >
-                29
+                26
               </Text>
               <View
                 style={
@@ -410,7 +410,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Monday 30 January 2023 "
+              accessibilityLabel=" Monday 27 February 2023 "
               accessibilityState={
                 Object {
                   "disabled": false,
@@ -434,7 +434,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-01-30"
+              testID="undefined.day_2023-02-27"
             >
               <Text
                 allowFontScaling={false}
@@ -454,7 +454,7 @@ exports[`renders correctly 1`] = `
                   ]
                 }
               >
-                30
+                27
               </Text>
               <View
                 style={
@@ -481,7 +481,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Tuesday 31 January 2023 "
+              accessibilityLabel=" Tuesday 28 February 2023 "
               accessibilityState={
                 Object {
                   "disabled": false,
@@ -505,7 +505,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-01-31"
+              testID="undefined.day_2023-02-28"
             >
               <Text
                 allowFontScaling={false}
@@ -525,7 +525,7 @@ exports[`renders correctly 1`] = `
                   ]
                 }
               >
-                31
+                28
               </Text>
               <View
                 style={
@@ -552,7 +552,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Wednesday 1 February 2023 "
+              accessibilityLabel=" Wednesday 1 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -577,7 +577,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-01"
+              testID="undefined.day_2023-03-01"
             >
               <Text
                 allowFontScaling={false}
@@ -621,7 +621,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Thursday 2 February 2023 "
+              accessibilityLabel=" Thursday 2 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -646,7 +646,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-02"
+              testID="undefined.day_2023-03-02"
             >
               <Text
                 allowFontScaling={false}
@@ -690,7 +690,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Friday 3 February 2023 "
+              accessibilityLabel=" Friday 3 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -715,7 +715,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-03"
+              testID="undefined.day_2023-03-03"
             >
               <Text
                 allowFontScaling={false}
@@ -759,7 +759,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Saturday 4 February 2023 "
+              accessibilityLabel=" Saturday 4 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -784,7 +784,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-04"
+              testID="undefined.day_2023-03-04"
             >
               <Text
                 allowFontScaling={false}
@@ -838,7 +838,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Sunday 5 February 2023 "
+              accessibilityLabel=" Sunday 5 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -863,7 +863,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-05"
+              testID="undefined.day_2023-03-05"
             >
               <Text
                 allowFontScaling={false}
@@ -907,7 +907,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Monday 6 February 2023 "
+              accessibilityLabel=" Monday 6 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -932,7 +932,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-06"
+              testID="undefined.day_2023-03-06"
             >
               <Text
                 allowFontScaling={false}
@@ -976,7 +976,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Tuesday 7 February 2023 "
+              accessibilityLabel=" Tuesday 7 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1001,7 +1001,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-07"
+              testID="undefined.day_2023-03-07"
             >
               <Text
                 allowFontScaling={false}
@@ -1045,7 +1045,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Wednesday 8 February 2023 "
+              accessibilityLabel=" Wednesday 8 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1070,7 +1070,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-08"
+              testID="undefined.day_2023-03-08"
             >
               <Text
                 allowFontScaling={false}
@@ -1114,7 +1114,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Thursday 9 February 2023 "
+              accessibilityLabel="today Thursday 9 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1134,12 +1134,14 @@ exports[`renders correctly 1`] = `
               style={
                 Object {
                   "alignItems": "center",
+                  "backgroundColor": undefined,
+                  "borderRadius": 16,
                   "height": 32,
                   "opacity": 1,
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-09"
+              testID="undefined.day_2023-03-09"
             >
               <Text
                 allowFontScaling={false}
@@ -1152,6 +1154,9 @@ exports[`renders correctly 1`] = `
                       "fontSize": 16,
                       "fontWeight": "300",
                       "marginTop": 6,
+                    },
+                    Object {
+                      "color": "#00BBF2",
                     },
                   ]
                 }
@@ -1183,7 +1188,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Friday 10 February 2023 "
+              accessibilityLabel=" Friday 10 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1208,7 +1213,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-10"
+              testID="undefined.day_2023-03-10"
             >
               <Text
                 allowFontScaling={false}
@@ -1252,7 +1257,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Saturday 11 February 2023 "
+              accessibilityLabel=" Saturday 11 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1277,7 +1282,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-11"
+              testID="undefined.day_2023-03-11"
             >
               <Text
                 allowFontScaling={false}
@@ -1331,7 +1336,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Sunday 12 February 2023 "
+              accessibilityLabel=" Sunday 12 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1356,7 +1361,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-12"
+              testID="undefined.day_2023-03-12"
             >
               <Text
                 allowFontScaling={false}
@@ -1400,7 +1405,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Monday 13 February 2023 "
+              accessibilityLabel=" Monday 13 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1425,7 +1430,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-13"
+              testID="undefined.day_2023-03-13"
             >
               <Text
                 allowFontScaling={false}
@@ -1469,7 +1474,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Tuesday 14 February 2023 "
+              accessibilityLabel=" Tuesday 14 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1494,7 +1499,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-14"
+              testID="undefined.day_2023-03-14"
             >
               <Text
                 allowFontScaling={false}
@@ -1538,7 +1543,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Wednesday 15 February 2023 "
+              accessibilityLabel=" Wednesday 15 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1563,7 +1568,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-15"
+              testID="undefined.day_2023-03-15"
             >
               <Text
                 allowFontScaling={false}
@@ -1607,7 +1612,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Thursday 16 February 2023 "
+              accessibilityLabel=" Thursday 16 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1632,7 +1637,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-16"
+              testID="undefined.day_2023-03-16"
             >
               <Text
                 allowFontScaling={false}
@@ -1676,7 +1681,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Friday 17 February 2023 "
+              accessibilityLabel=" Friday 17 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1701,7 +1706,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-17"
+              testID="undefined.day_2023-03-17"
             >
               <Text
                 allowFontScaling={false}
@@ -1745,7 +1750,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel="today Saturday 18 February 2023 "
+              accessibilityLabel=" Saturday 18 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1765,14 +1770,12 @@ exports[`renders correctly 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": undefined,
-                  "borderRadius": 16,
                   "height": 32,
                   "opacity": 1,
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-18"
+              testID="undefined.day_2023-03-18"
             >
               <Text
                 allowFontScaling={false}
@@ -1785,9 +1788,6 @@ exports[`renders correctly 1`] = `
                       "fontSize": 16,
                       "fontWeight": "300",
                       "marginTop": 6,
-                    },
-                    Object {
-                      "color": "#00BBF2",
                     },
                   ]
                 }
@@ -1829,7 +1829,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Sunday 19 February 2023 "
+              accessibilityLabel=" Sunday 19 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1854,7 +1854,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-19"
+              testID="undefined.day_2023-03-19"
             >
               <Text
                 allowFontScaling={false}
@@ -1898,7 +1898,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Monday 20 February 2023 "
+              accessibilityLabel=" Monday 20 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1923,7 +1923,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-20"
+              testID="undefined.day_2023-03-20"
             >
               <Text
                 allowFontScaling={false}
@@ -1967,7 +1967,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Tuesday 21 February 2023 "
+              accessibilityLabel=" Tuesday 21 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -1992,7 +1992,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-21"
+              testID="undefined.day_2023-03-21"
             >
               <Text
                 allowFontScaling={false}
@@ -2036,7 +2036,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Wednesday 22 February 2023 "
+              accessibilityLabel=" Wednesday 22 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -2061,7 +2061,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-22"
+              testID="undefined.day_2023-03-22"
             >
               <Text
                 allowFontScaling={false}
@@ -2105,7 +2105,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Thursday 23 February 2023 "
+              accessibilityLabel=" Thursday 23 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -2130,7 +2130,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-23"
+              testID="undefined.day_2023-03-23"
             >
               <Text
                 allowFontScaling={false}
@@ -2174,7 +2174,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Friday 24 February 2023 "
+              accessibilityLabel=" Friday 24 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -2199,7 +2199,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-24"
+              testID="undefined.day_2023-03-24"
             >
               <Text
                 allowFontScaling={false}
@@ -2243,7 +2243,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Saturday 25 February 2023 "
+              accessibilityLabel=" Saturday 25 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -2268,7 +2268,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-25"
+              testID="undefined.day_2023-03-25"
             >
               <Text
                 allowFontScaling={false}
@@ -2322,7 +2322,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Sunday 26 February 2023 "
+              accessibilityLabel=" Sunday 26 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -2347,7 +2347,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-26"
+              testID="undefined.day_2023-03-26"
             >
               <Text
                 allowFontScaling={false}
@@ -2391,7 +2391,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Monday 27 February 2023 "
+              accessibilityLabel=" Monday 27 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -2416,7 +2416,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-27"
+              testID="undefined.day_2023-03-27"
             >
               <Text
                 allowFontScaling={false}
@@ -2460,7 +2460,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Tuesday 28 February 2023 "
+              accessibilityLabel=" Tuesday 28 March 2023 "
               accessibilityRole="button"
               accessibilityState={
                 Object {
@@ -2485,7 +2485,7 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-02-28"
+              testID="undefined.day_2023-03-28"
             >
               <Text
                 allowFontScaling={false}
@@ -2529,7 +2529,8 @@ exports[`renders correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel=" Wednesday 1 March 2023 "
+              accessibilityLabel=" Wednesday 29 March 2023 "
+              accessibilityRole="button"
               accessibilityState={
                 Object {
                   "disabled": false,
@@ -2553,7 +2554,213 @@ exports[`renders correctly 1`] = `
                   "width": 32,
                 }
               }
-              testID="undefined.day_2023-03-01"
+              testID="undefined.day_2023-03-29"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgba(255, 255, 255, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+              >
+                29
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Thursday 30 March 2023 "
+              accessibilityRole="button"
+              accessibilityState={
+                Object {
+                  "disabled": false,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="undefined.day_2023-03-30"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgba(255, 255, 255, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+              >
+                30
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Friday 31 March 2023 "
+              accessibilityRole="button"
+              accessibilityState={
+                Object {
+                  "disabled": false,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="undefined.day_2023-03-31"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgba(255, 255, 255, 0)",
+                      "color": "#2d4150",
+                      "fontFamily": "System",
+                      "fontSize": 16,
+                      "fontWeight": "300",
+                      "marginTop": 6,
+                    },
+                  ]
+                }
+              >
+                31
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 2,
+                      "height": 4,
+                      "marginHorizontal": 1,
+                      "marginTop": 1,
+                      "opacity": 0,
+                      "width": 4,
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel=" Saturday 1 April 2023 "
+              accessibilityState={
+                Object {
+                  "disabled": false,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 32,
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+              testID="undefined.day_2023-04-01"
             >
               <Text
                 allowFontScaling={false}
@@ -2574,219 +2781,6 @@ exports[`renders correctly 1`] = `
                 }
               >
                 1
-              </Text>
-              <View
-                style={
-                  Array [
-                    Object {
-                      "borderRadius": 2,
-                      "height": 4,
-                      "marginHorizontal": 1,
-                      "marginTop": 1,
-                      "opacity": 0,
-                      "width": 4,
-                    },
-                  ]
-                }
-              />
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "flex": 1,
-              }
-            }
-          >
-            <View
-              accessibilityLabel=" Thursday 2 March 2023 "
-              accessibilityState={
-                Object {
-                  "disabled": false,
-                }
-              }
-              accessible={true}
-              collapsable={false}
-              focusable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "alignItems": "center",
-                  "height": 32,
-                  "opacity": 1,
-                  "width": 32,
-                }
-              }
-              testID="undefined.day_2023-03-02"
-            >
-              <Text
-                allowFontScaling={false}
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgba(255, 255, 255, 0)",
-                      "color": "#2d4150",
-                      "fontFamily": "System",
-                      "fontSize": 16,
-                      "fontWeight": "300",
-                      "marginTop": 6,
-                    },
-                    Object {
-                      "color": "#d9e1e8",
-                    },
-                  ]
-                }
-              >
-                2
-              </Text>
-              <View
-                style={
-                  Array [
-                    Object {
-                      "borderRadius": 2,
-                      "height": 4,
-                      "marginHorizontal": 1,
-                      "marginTop": 1,
-                      "opacity": 0,
-                      "width": 4,
-                    },
-                  ]
-                }
-              />
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "flex": 1,
-              }
-            }
-          >
-            <View
-              accessibilityLabel=" Friday 3 March 2023 "
-              accessibilityState={
-                Object {
-                  "disabled": false,
-                }
-              }
-              accessible={true}
-              collapsable={false}
-              focusable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "alignItems": "center",
-                  "height": 32,
-                  "opacity": 1,
-                  "width": 32,
-                }
-              }
-              testID="undefined.day_2023-03-03"
-            >
-              <Text
-                allowFontScaling={false}
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgba(255, 255, 255, 0)",
-                      "color": "#2d4150",
-                      "fontFamily": "System",
-                      "fontSize": 16,
-                      "fontWeight": "300",
-                      "marginTop": 6,
-                    },
-                    Object {
-                      "color": "#d9e1e8",
-                    },
-                  ]
-                }
-              >
-                3
-              </Text>
-              <View
-                style={
-                  Array [
-                    Object {
-                      "borderRadius": 2,
-                      "height": 4,
-                      "marginHorizontal": 1,
-                      "marginTop": 1,
-                      "opacity": 0,
-                      "width": 4,
-                    },
-                  ]
-                }
-              />
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "flex": 1,
-              }
-            }
-          >
-            <View
-              accessibilityLabel=" Saturday 4 March 2023 "
-              accessibilityState={
-                Object {
-                  "disabled": false,
-                }
-              }
-              accessible={true}
-              collapsable={false}
-              focusable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "alignItems": "center",
-                  "height": 32,
-                  "opacity": 1,
-                  "width": 32,
-                }
-              }
-              testID="undefined.day_2023-03-04"
-            >
-              <Text
-                allowFontScaling={false}
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgba(255, 255, 255, 0)",
-                      "color": "#2d4150",
-                      "fontFamily": "System",
-                      "fontSize": 16,
-                      "fontWeight": "300",
-                      "marginTop": 6,
-                    },
-                    Object {
-                      "color": "#d9e1e8",
-                    },
-                  ]
-                }
-              >
-                4
               </Text>
               <View
                 style={

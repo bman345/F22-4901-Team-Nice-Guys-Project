@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Button, Pressable, Image } from 'react-native';
 
 export default function HomeScreen({ navigation }) {
   
+  console.log("This is the home screen");
     return (
       <View style={styles.container}>
         <Image style={styles.image} source={require("../assets/BabyTrackerLogo2.png")}/>
