@@ -8,7 +8,3 @@ test('renders correctly', () => {
     const tree = renderer.create(<MainHomeScreen />).toJSON();
     expect(tree).toMatchSnapshot();
   });
-
-test('check if button components are there'
-
-);
