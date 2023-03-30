@@ -23,8 +23,6 @@ export default function HomeScreen({ navigation, route }) {
     const [snapshot, loading_db, error_db] = useListVals(getReference(`accounts/${user.uid}`));
 
 
-
-
     if (snapshot && snapshot[0] != undefined) {
         const user_data = { email: snapshot[0], phone: snapshot[1], username: snapshot[2], baby_data: snapshot[3], uid: user.uid };
         // console.log(snapshot)

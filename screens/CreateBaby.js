@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { SelectList } from "react-native-dropdown-select-list";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { getFirebaseAuth, createBaby } from "../Firebase";
 
@@ -35,7 +36,13 @@ export default function CreateBaby({ navigation, route }) {
   const [weight, SetWeight] = useState("");
   const [height, setHeight] = useState("");
   const [name, SetBabyName] = useState("");
-  const [gender, SetGender] = useState("");
+  const [gender, SetGender] = useState("genders");
+  //used for list to pick gender for baby
+  const genders = [
+   {key: '1', value: 'Male'},
+   {key: '2', value: 'Female'},
+  ]
+  
 
   return (
 
@@ -98,17 +105,16 @@ export default function CreateBaby({ navigation, route }) {
           />
         </View>
 
-        <View style={styles.inputView}>
-
-          <TextInput
-
-            style={styles.TextInput}
+        <View style = {styles.inputView}>
+          <SelectList
+            setSelected={(val) => SetGender(val)}
+            data={genders}
+            save="value"
             placeholder="Gender"
-            placeholderTextColor="#000000"
-            onChangeText={SetGender}
-            value={gender}
-
+            maxHeight={100}
+            boxStyles={styles.dropdown}
           />
+
         </View>
 
         
@@ -141,10 +147,10 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    height: 200,
+    height: 150,
     width: 200,
     marginBottom: 40,
-    marginLeft:40,
+    marginLeft:30,
   },
 
 
@@ -178,7 +184,7 @@ const styles = StyleSheet.create({
     height: 50,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 40,
+    marginTop: 80,
     backgroundColor: "#82A16E",
   },
 
@@ -190,6 +196,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 40,
     backgroundColor: "#7DC265",
+  },
+
+  dropdown:{
+    width: 270,
+    borderColor: "#ffffff00",
   },
 
 });

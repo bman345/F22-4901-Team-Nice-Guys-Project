@@ -98,7 +98,9 @@ export default function AccountScreen({navigation, route}) {
                 <TouchableOpacity
                   key={label}
                   onPress={() => {
-                    // handle onPress
+                    {
+                      console.log("This is the account button");
+                    }
                   }}>
                   <View style={[styles.row, { backgroundColor: theme.background }]}>
                     <View style={[styles.rowIcon, { backgroundColor: color }]}>
