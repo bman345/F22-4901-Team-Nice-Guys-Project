@@ -148,7 +148,7 @@ export default function App() {
           <Stack.Screen name="Create Baby" component={CreateBaby} />
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Registration" component={RegistrationScreen} />
-          <Stack.Screen name="Calendar" component={CalendarTab} options={{ headerShown: false }} />
+          
 
         </Stack.Navigator>
 
