@@ -53,6 +53,7 @@ export default function AccountScreen({navigation, route}) {
   const theme = useContext(themeContext);
   const [mode, setMode] = useState(false);
   const user_data = route.params.user_data;
+  console.log( "ACCOUNT: ", user_data)
 
   return (
     <SafeAreaView style={{ flex: 1 }}>

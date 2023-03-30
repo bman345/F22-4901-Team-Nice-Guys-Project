@@ -1,31 +1,24 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/native';
 //import * as React from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import themeContext from './config/themeContext';
 import theme from './config/theme';
 import { EventRegister } from 'react-native-event-listeners';
 import React, { useState, useEffect } from 'react';
 
-import HomeScreen from './screens/HomeScreen';
+import InitialScreen from './screens/InitialScreen';
 import RegistrationScreen from './screens/Registration';
 import LoginScreen from './screens/Login';
 import CreateBaby from './screens/CreateBaby';
-import Calendar from './screens/CalendarScreen';
-import Account from './screens/Account';
-import Reminders from './screens/Reminders';
-import Track from './screens/Track';
-import Analysis from './screens/Analysis';
+
 import { getFirebaseApp, getFirebaseAuth } from './Firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import MainHomeScreen from './screens/MainHomeScreen';
+import HomeScreen from './screens/HomeScreen';
 
 //stack variable for page navigation in app
 
 const Stack = createNativeStackNavigator();
+/*
 const Tab = createBottomTabNavigator();
 
 function CalendarTab() {
@@ -89,7 +82,7 @@ function CalendarTab() {
   );
 }
 
-
+*/
 
 export default function App() {
   const [mode, setMode] = useState(false);
@@ -135,10 +128,8 @@ export default function App() {
 
         <Stack.Navigator>
 
-          <Stack.Screen name="MainHomeScreen" component={MainHomeScreen} initialParams={{user: user}} />
-          <Stack.Screen name="Account" component={Account} />
-          <Stack.Screen name="CreateBaby" component={CreateBaby} />
-          <Stack.Screen name="Calendar" component={CalendarTab} options={{ headerShown: false }} />
+          <Stack.Screen name="HomeScreen" component={HomeScreen} initialParams={{user: user}} />
+          
 
         </Stack.Navigator>
 
@@ -153,7 +144,7 @@ export default function App() {
 
         <Stack.Navigator>
 
-          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Initial" component={InitialScreen} />
           <Stack.Screen name="Create Baby" component={CreateBaby} />
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Registration" component={RegistrationScreen} />
