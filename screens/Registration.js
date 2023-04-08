@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { createUser, getFirebaseAuth } from "../Firebase";
+import MaskInput, { Masks } from "react-native-mask-input";
 
 import {
   StyleSheet,
@@ -67,6 +68,7 @@ export default function Registration({ navigation }) {
           </View>
 
           <View style={styles.inputView}>
+            {/*}
             <TextInput
               style={styles.TextInput}
               placeholder="Phone Number"
@@ -74,6 +76,14 @@ export default function Registration({ navigation }) {
               onChangeText={setPhone}
               value={phone}
 
+            />*/}
+
+            <MaskInput
+              style={styles.TextInput}
+              placeholder="Phone number"
+              value={phone}
+              onChangeText={setPhone}
+              mask={Masks.USA_PHONE}
             />
           </View>
 
@@ -95,9 +105,6 @@ export default function Registration({ navigation }) {
             <Button title="Register" color="black" style={styles.registerText} onPress={() => { createUserWithEmailAndPassword(email, password).then((token) => createUser(name, email, phone, token.user.uid)); }} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.registerBtn}>
-            <Button title="Create Baby (testing)" color="black" style={styles.registerText} onPress={() => { navigation.navigate("Create Baby"); }} />
-          </TouchableOpacity>
 
         </View>
       </KeyboardAwareScrollView>

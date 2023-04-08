@@ -2,9 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Pressable, Image } from 'react-native';
 import { useListVals } from 'react-firebase-hooks/database';
 import { getFirebaseAuth, getReference } from '../Firebase';
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
 import theme from '../config/theme';
 import Reminders from './Reminders';
 import Track from './Track';
@@ -70,10 +68,10 @@ export default function HomeScreen({ navigation, route }) {
                     }}
                 />
 
-                <Tab.Screen name="Calendars" component={Calendar} initialParams={{ user_data: user_data }} options={
+                <Tab.Screen name="Baby" component={Calendar} initialParams={{ user_data: user_data }} options={
                     {
                         tabBarIcon: ({ color, size }) =>
-                            (<Ionicons name='calendar-outline' color={color} size={size} />)
+                            (<MaterialCommunityIcons name='baby' color={color} size={size} />)
                     }}
                 />
 
