@@ -9,15 +9,23 @@ import {
 } from 'react-native';
 import themeContext from '../config/themeContext';
 
-export default function App() {
+export default function Reminders({navigation, route}) {
   const theme = useContext(themeContext);
-  const [notes, setNotes] = useState([]);
+  const user_account = route.params.user_account;
+  const [notes, setNotes] = useState(user_account.getReminders());
   const [noteText, setNoteText] = useState('');
-
+  
+ console.log(notes)
   const addNote = () => {
     if (noteText.length > 0) {
-      setNotes([...notes, { text: noteText, date: new Date() }]);
+      const newNotes = [...notes, { text: noteText, date: Date.now() }];
+      setNotes(newNotes);
       setNoteText('');
+
+      user_account.setReminderData(newNotes);
+      user_account.updateDatabase();
+
+      console.log("update", user_account)
     }
   };
 
@@ -25,6 +33,10 @@ export default function App() {
     const newNotes = [...notes];
     newNotes.splice(index, 1);
     setNotes(newNotes);
+    user_account.setReminderData(newNotes);
+    user_account.updateDatabase();
+
+    
   };
 
   return (
@@ -51,7 +63,7 @@ export default function App() {
               {note.text}
             </Text>
             <Text style={[styles.dateText, { color: theme.color }]}>
-              {note.date.toDateString()}
+              {new Date(note.date).toDateString()}
             </Text>
             <TouchableOpacity
               style={styles.deleteButton}

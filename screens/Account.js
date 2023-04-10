@@ -12,6 +12,7 @@ import {
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import { EventRegister } from "react-native-event-listeners";
 import themeContext from '../config/themeContext';
+import { getFirebaseAuth } from '../Firebase';
 
 
 //creating rows/ sections for each option
@@ -51,9 +52,9 @@ export default function AccountScreen({navigation, route}) {
 
   //const to witch between light and dark mode in togggle
   const theme = useContext(themeContext);
+  const auth = getFirebaseAuth();
   const [mode, setMode] = useState(false);
-  const user_data = route.params.user_data;
-  console.log( "ACCOUNT: ", user_data)
+  const user_account = route.params.user_account;
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -82,7 +83,7 @@ export default function AccountScreen({navigation, route}) {
           </TouchableOpacity>
 
           <View style={styles.profileBody}>
-            <Text style={[styles.profileName, { color: theme.color }]}> {user_data.username} </Text>
+            <Text style={[styles.profileName, { color: theme.color }]}> {user_account.username} </Text>
 
             <Text style={[styles.Role, { color: theme.color }]}>
               Admin: Parent
@@ -100,6 +101,8 @@ export default function AccountScreen({navigation, route}) {
                   onPress={() => {
                     {
                       console.log("This is the account button");
+                      auth.signOut();
+
                     }
                   }}>
                   <View style={[styles.row, { backgroundColor: theme.background }]}>

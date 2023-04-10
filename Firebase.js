@@ -40,16 +40,20 @@ function getUserData(uid) {
 
 function createUser(name, email, phone, uid) {
   set(getReference('accounts/' + uid), {
-    zbabydata: [],
+    babydata: [],
     username: name,
     email: email,
     phone: phone
   });
 }
 
+function updateUserData(user_account) {
+  set(getReference('accounts/' + user_account.uid), user_account.data);
+}
+
 function createBaby(user_data, baby_data) {
-  push(getReference(`accounts/${user_data.uid}/zbaby_data/`), baby_data);
+  push(getReference(`accounts/${user_data.uid}/baby_data/`), baby_data);
 }
 
 
-export { getFirebaseApp, getFirebaseAuth, getReference, createUser, createBaby  };
+export { getFirebaseApp, getFirebaseAuth, getReference, createUser, createBaby, updateUserData };

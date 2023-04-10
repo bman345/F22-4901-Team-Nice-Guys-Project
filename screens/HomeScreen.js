@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Pressable, Image } from 'react-native';
-import { useListVals } from 'react-firebase-hooks/database';
+import { useListVals, useList } from 'react-firebase-hooks/database';
 import { getFirebaseAuth, getReference } from '../Firebase';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -13,6 +13,7 @@ import Analysis from './Analysis';
 import Calendar from './CalendarScreen';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Account from './Account';
+import UserAccount from './UserAccount'
 
 const Tab = createBottomTabNavigator();
 
@@ -20,29 +21,11 @@ export default function HomeScreen({ navigation, route }) {
 
     const auth = getFirebaseAuth();
     const user = route.params.user;
-    const [snapshot, loading_db, error_db] = useListVals(getReference(`accounts/${user.uid}`));
+    const [snapshot, loading, error] = useList(getReference(`accounts/${user.uid}/`));
 
 
-    if (snapshot && snapshot[0] != undefined) {
-        const user_data = { email: snapshot[0], phone: snapshot[1], username: snapshot[2], baby_data: snapshot[3], uid: user.uid };
-        // console.log(snapshot)
-        console.log("HOMESCREEN: ", user_data)
-
-        /*return (
-            <View style={styles.container}>
-                <Image style={styles.image} source={require("../assets/BabyTrackerLogo2.png")} />
-                <Pressable style={styles.Button1} onPress={() => navigation.navigate("Account", {user_data: user_data})}>
-                    <Text style={styles.Text}>Account</Text>
-                </Pressable>
-                <Pressable style={styles.Button2} onPress={() => navigation.navigate("CreateBaby", {user_data: user_data})}>
-                    <Text style={styles.Text}>Create Baby</Text>
-                </Pressable>
-                <Pressable style={styles.Button2} onPress={() => auth.signOut()}>
-                    <Text style={styles.Text}>Log out</Text>
-                </Pressable>
-                <StatusBar style="auto" />
-            </View>
-        );*/
+    if (snapshot && !loading) {
+        const user_account = new UserAccount(snapshot, user.uid)
 
         return (
 
@@ -62,36 +45,36 @@ export default function HomeScreen({ navigation, route }) {
                 },
             }}>
 
-                
-                <Tab.Screen name="Reminders" component={Reminders} initialParams={{ user_data: user_data }} options={
+
+                <Tab.Screen name="Reminders" component={Reminders} initialParams={{ user_account: user_account }} options={
                     {
                         tabBarIcon: ({ color, size }) =>
                             (<MaterialCommunityIcons name="calendar-clock" size={size} color={color} />)
                     }}
                 />
 
-                <Tab.Screen name="Calendars" component={Calendar} initialParams={{ user_data: user_data }} options={
+                <Tab.Screen name="Calendars" component={Calendar} initialParams={{ user_account: user_account }} options={
                     {
                         tabBarIcon: ({ color, size }) =>
                             (<Ionicons name='calendar-outline' color={color} size={size} />)
                     }}
                 />
 
-                <Tab.Screen name="Track" component={Track} initialParams={{ user_data: user_data }} options={
+                <Tab.Screen name="Track" component={Track} initialParams={{ user_account: user_account }} options={
                     {
                         tabBarIcon: ({ color, size }) =>
                             (<Ionicons name='add-circle' color={color} size={size} />)
                     }}
                 />
 
-                <Tab.Screen name="Analysis" component={Analysis} initialParams={{ user_data: user_data }} options={
+                <Tab.Screen name="Analysis" component={Analysis} initialParams={{ user_account: user_account }} options={
                     {
                         tabBarIcon: ({ color, size }) =>
                             (<Ionicons name='bar-chart' color={color} size={size} />)
                     }}
                 />
 
-                <Tab.Screen name="Account" component={Account} initialParams={{ user_data: user_data }} options={
+                <Tab.Screen name="Account" component={Account} initialParams={{ user_account: user_account }} options={
                     {
                         tabBarIcon: ({ color, size }) =>
                             (<MaterialCommunityIcons name="account" size={size} color={color} />)
