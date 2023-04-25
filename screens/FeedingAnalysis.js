@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React from 'react';
 import { BarChart } from 'react-native-chart-kit';
-
+import { Dimensions } from 'react-native';
 import moment from 'moment';
 
 const FeedingAnalysis = () => {
@@ -50,9 +49,7 @@ const FeedingAnalysis = () => {
     ],
   };
 
-  const formatYLabel = (value) => {
-    return ""
-  };
+  const screenWidth = Dimensions.get('window').width;
 
   const chartConfig = {
     backgroundGradientFrom: "#fff",
@@ -65,9 +62,9 @@ const FeedingAnalysis = () => {
   return (
       <BarChart
         data={data}
-        width={400}
+        width={screenWidth}
         height={220}
-        yAxisSuffix=' feeds'
+        yAxisSuffix=' meals'
         chartConfig={chartConfig}
         style={{ marginVertical: 8 }}
       />

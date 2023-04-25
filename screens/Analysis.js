@@ -3,9 +3,13 @@ import { StyleSheet, View } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
 import React, { useState } from 'react';
 import FeedingAnalysis from './FeedingAnalysis';
+import SleepAnalysis from './SleepAnalysis';
+import WeightAnalysis from './WeightAnalysis';
 
 const SubScreens = [
-  { label: 'Feedings', value: 'feeding-analysis' },
+  { label: 'Meals', value: 'feeding-analysis' },
+  { label: 'Sleep', value: 'sleep-analysis' },
+  { label: 'Weight', value: 'weight-analysis' },
   { label: "placeholder", value: 'placeholder' }
 ];
 
@@ -16,6 +20,10 @@ export default function Analysis() {
     switch (selectedScreen) {
       case 'feeding-analysis':
         return <FeedingAnalysis />;
+      case 'sleep-analysis':
+        return <SleepAnalysis />;
+      case 'weight-analysis':
+        return <WeightAnalysis />;
       default:
         return null;
     }
