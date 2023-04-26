@@ -5,6 +5,7 @@ import {
   ScrollView,
   View,
   Text,
+  Pressable,
   TouchableOpacity,
   Image,
   Switch,
@@ -34,14 +35,6 @@ const SECTIONS = [
         type: 'toggle',
       },
 
-    ],
-  },
-  {
-    header: 'Help',
-    icon: 'help-circle',
-    items: [
-      { icon: 'flag', color: '#8e8d91', label: 'Report Bug', type: 'link' },
-      { icon: 'mail', color: '#007afe', label: 'Contact Us', type: 'link' },
     ],
   },
 
@@ -144,6 +137,9 @@ export default function AccountScreen({navigation, route}) {
             })}
           </View>
         ))}
+        <Pressable style={styles.loginBtn} onPress={() => navigation.navigate("Login")}>
+       <Text style={[styles.Text, {color: theme.color}]}> Sign Out </Text>
+      </Pressable>
       </ScrollView>
     </SafeAreaView>
   );
@@ -227,6 +223,16 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: '400',
     color: '#0c0c0c',
+  },
+    loginBtn: {
+    width: "50%",
+    borderRadius: 25,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 150,
+    backgroundColor: "#82A16E",
+    marginLeft: 105,
   },
   rowSpacer: {
     flexGrow: 1,
