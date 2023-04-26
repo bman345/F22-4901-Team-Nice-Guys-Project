@@ -42,8 +42,9 @@ export default function Reminders({navigation, route}) {
   return (
     <View style={[styles.profile, { backgroundColor: theme.background }]}>
       <TextInput
-        style={styles.input}
+        style={[styles.input, { color: theme.color}]}
         placeholder="Write a note"
+        placeholderTextColor= "#698"
         value={noteText}
         onChangeText={(text) => setNoteText(text)}
       />
