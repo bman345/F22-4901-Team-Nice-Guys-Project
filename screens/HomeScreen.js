@@ -8,7 +8,7 @@ import Reminders from './Reminders';
 import Track from './Track';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Analysis from './Analysis';
-import Calendar from './CalendarScreen';
+import BabyScreen from './BabyScreen';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Account from './Account';
 import UserAccount from './UserAccount'
@@ -51,7 +51,7 @@ export default function HomeScreen({ navigation, route }) {
                     }}
                 />
 
-                <Tab.Screen name="Calendars" component={Calendar} initialParams={{ user_account: user_account }} options={
+                <Tab.Screen name="Baby" component={BabyScreen} initialParams={{ user_account: user_account }} options={
                     {
                         tabBarIcon: ({ color, size }) =>
                             (<MaterialCommunityIcons name='baby' color={color} size={size} />)

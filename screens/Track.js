@@ -1,8 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Pressable, Image } from 'react-native';
 import { getFirebaseAuth, getReference } from '../Firebase';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Icon, SafeAreaView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Button, Icon, SafeAreaView, TouchableOpacity, Pressable, Image } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
@@ -23,21 +21,19 @@ setcurrentDate(`${month}/${date}/${year}`);
   
   return (
     <View style={styles.container}>
-      <Pressable style={styles.Button2} onPress={() => auth.signOut()}>
-        <Text style={styles.Text}>Log out</Text>
-      </Pressable>
-      <StatusBar style="auto" />
-    </View>
+   
       <Text style={styles.title}>Today's Date</Text>
       <View style={[styles.currentDateContainer, {top: -8}]}>
         <Text style={styles.currentDate}>{currentDate}</Text>
         <View style={styles.separator} />
       </View>
+      {/*TODO: Add Feeding page*/}
+      {/*
       <TouchableOpacity onPress={() => navigation.navigate("Feedings")}>
         <View style={styles.feedingContainer}>
           <Text style={styles.feedingText}>Feeding</Text>
         </View>
-      </TouchableOpacity>
+      </TouchableOpacity>*/}
 
  
       <TouchableOpacity onPress={() => navigation.navigate('Diapers')}>

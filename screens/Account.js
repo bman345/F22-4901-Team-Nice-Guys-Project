@@ -150,7 +150,7 @@ export default function AccountScreen({navigation, route}) {
             })}
           </View>
         ))}
-        <Pressable style={styles.loginBtn} onPress={() => navigation.navigate("Login")}>
+        <Pressable style={styles.loginBtn} onPress={() => auth.signOut()}>
        <Text style={[styles.Text, {color: theme.color}]}> Sign Out </Text>
       </Pressable>
       </ScrollView>
