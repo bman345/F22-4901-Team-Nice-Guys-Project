@@ -16,32 +16,31 @@ import themeContext from '../config/themeContext';
 import { getFirebaseAuth } from '../Firebase';
 
 
-//creating rows/ sections for each option
-const SECTIONS = [
-  {
-    header: 'Preferences',
-    icon: 'settings',
-    items: [
-
-      { icon: 'user', color: '#32c759', label: 'Account Information', type: 'link' },
-      { icon: 'phone', color: '#fd2d54', label: 'Emergency Contact', type: 'link' },
-      { icon: 'users', color: '#fe9400', label: 'Manage Accounts', type: 'link' },
-      {
-        //id: 'darkMode',
-        icon: 'moon',
-        color: '#007afe',
-        label: 'Dark Mode',
-        //setForm: false,
-        type: 'toggle',
-      },
-
-    ],
-  },
-
-];
 
 
 export default function AccountScreen({navigation, route}) {
+  
+   const SECTIONS = [
+    {
+      header: 'Preferences',
+      icon: 'settings',
+      items: [
+        
+        { icon: 'user', color: '#32c759', label: 'Account Information', type: 'link',  onPress: () => navigation.navigate("Login")},
+        { icon: 'phone', color: '#fd2d54', label: 'Emergency Contact', type: 'link', onPress: () => navigation.navigate("Login") },
+        //{ icon: 'users', color: '#fe9400', label: 'Manage Accounts', type: 'link', onPress: () => navigation.navigate("Login")},
+        {
+          //id: 'darkMode',
+          icon: 'moon',
+          color: '#007afe',
+          label: 'Dark Mode',
+          //setForm: false,
+          type: 'toggle',
+        },
+       
+      ],
+    },
+  ];
 
   //const to witch between light and dark mode in togggle
   const theme = useContext(themeContext);
@@ -121,14 +120,28 @@ export default function AccountScreen({navigation, route}) {
                       />
                     )}
 
-                    {type === 'link' && (
+                   {label === 'Account Information' && (
+                      
                       <FeatherIcon
                         //color="#0c0c0c" //original color
-                        color={theme.color}
+                        color = {theme.color}
                         name="chevron-right"
                         size={22}
+                        onPress={() => navigation.navigate("AccInfo")}
 
 
+                      />
+                    )}
+                    
+                    {label === 'Emergency Contact' && (
+                      
+                      <FeatherIcon
+                        //color="#0c0c0c" //original color
+                        color = {theme.color}
+                        name="chevron-right"
+                        size={22}
+                        onPress={() => navigation.navigate("Emergency Contact")}
+                        
                       />
                     )}
                   </View>
