@@ -14,6 +14,8 @@ import CreateBaby from './screens/CreateBaby';
 import { getFirebaseApp, getFirebaseAuth } from './Firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import HomeScreen from './screens/HomeScreen';
+import AccInfoScreen from './screens/AccInfo';
+import EmergencyContactScreen from './screens/Econtact';
 
 //stack variable for page navigation in app
 
@@ -148,6 +150,8 @@ export default function App() {
           <Stack.Screen name="Create Baby" component={CreateBaby} />
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Registration" component={RegistrationScreen} />
+          <Stack.Screen name="AccInfo" component={AccInfoScreen} />
+          <Stack.Screen name="Emergency Contact" component={EmergencyContactScreen} />
           
 
         </Stack.Navigator>
