@@ -10,6 +10,15 @@ import InitialScreen from './screens/InitialScreen';
 import RegistrationScreen from './screens/Registration';
 import LoginScreen from './screens/Login';
 import CreateBaby from './screens/CreateBaby';
+import Feeding from './screens/Feeding';
+import Track from './screens/Track';
+import Doctor from './screens/Doctor';
+import Medication from './screens/Medication';
+import Diaper from './screens/Diaper';
+import Sleep from './screens/Sleep';
+
+
+
 
 import { getFirebaseApp, getFirebaseAuth } from './Firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -131,6 +140,12 @@ export default function App() {
         <Stack.Navigator>
 
           <Stack.Screen name="HomeScreen" component={HomeScreen} initialParams={{user: user}} />
+          <Stack.Screen name="Feedings" component={Feeding}/>
+          <Stack.Screen name="Tracks" component={Track}/>
+          <Stack.Screen name="Doc" component={Doctor} />
+          <Stack.Screen name="Sleeps" component={Sleep} />
+          <Stack.Screen name="Meds" component={Medication} />
+          <Stack.Screen name="Diapers" component={Diaper} />
           
 
         </Stack.Navigator>
