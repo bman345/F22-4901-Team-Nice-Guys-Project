@@ -27,13 +27,13 @@ setcurrentDate(`${month}/${date}/${year}`);
         <Text style={styles.currentDate}>{currentDate}</Text>
         <View style={styles.separator} />
       </View>
-      {/*TODO: Add Feeding page*/}
-      {/*
+
+      
       <TouchableOpacity onPress={() => navigation.navigate("Feedings")}>
         <View style={styles.feedingContainer}>
           <Text style={styles.feedingText}>Feeding</Text>
         </View>
-      </TouchableOpacity>*/}
+      </TouchableOpacity>
 
  
       <TouchableOpacity onPress={() => navigation.navigate('Diapers')}>
